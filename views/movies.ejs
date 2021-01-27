@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+</head>
+<body>
+    <h1>🦞 🦞  </h1>
+    <h1>  Our Movie List List  </h1>
+    <%- include('partial/navbar') %>
+    <a href="/movies/add">Wanna Add Movie click here baby 💋 </a>
+
+    <table border="3">
+         <tr>
+             <th>Id</th>
+             <th>Name</th>
+             <th>Released Year</th>
+             <th>genre</th>
+             <th>Production House</th>
+             <th>Rating</th>
+             <th>Action</th>
+         </tr>
+         
+         <% data.forEach((each)=>{%>
+         <tr>
+             <td><%= each.id %></td>
+             <td><%= each.name%></td>
+             <td><%= each.released_year%></td>
+             <td><%= each.genre %></td>
+             <%if(each.ProductionHouse){%>
+             <td><%= each.ProductionHouse.name_prodHouse%></td>
+             <%} else { %> 
+             <td> unknown </td>             
+             <% } %>
+             <td><%= each.Rating%></td>
+             <td>
+
+                <a href="/movies/<%= each.id %>/edit">Edit</a>  ||  <a href="/movies/<%= each.id %>/delete">Delete</a> ||
+                <a href="/movies/<%= each.id %>/addcast"  class="btn btn-info btn-sm" tabindex="-1" role="button">Add Cast</a>
+             </td>
+         </tr>
+        <%})%>
+
+    </table>
+
+
+
+    
+</body>
+</html>

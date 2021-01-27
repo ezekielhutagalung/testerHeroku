@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cast</title>
+</head>
+<body>
+    <h1>🦞🦞🦞</h1>
+    <h1>Our Cast List</h1>
+    <%- include('partial/navbar') %>
+    <a href="/casts/add">Wanna Add Cast Click here Honey 💋 </a> 
+    <table border="4">
+        <tr>
+             <th>Id</th>
+             <th>First Name</th>
+             <th>Full Name</th>
+             <th>Birth Year</th>
+             <th>Phone Number</th>
+             <th>Gender</th>
+             <th>Action</th>
+
+        </tr> 
+
+        <% data.forEach(el=>{ %>
+        <tr>
+            <td><%= el.id  %></td>
+            <td><%= el.first_name %> 
+            <td><%= el.getFullName()  %></td>
+            <td><%= el.birth_year %></td>
+            <td><%= el.phone_number %></td>         
+            <td><%= el.gender %></td>
+            <td>
+
+                <a href="/casts/<%= el.id%>/edit">Edit</a> ||  <a href="/casts/<%= el.id%>/delete" class="button" tabindex="-1" role="button" onclick="return confirm('Delete <%= el.first_name %> <%= el.last_name  %>')">Delete</a>  ||  <a href="/casts/<%= el.id%>/seemovies">See Movies</a>
+            </td>              
+        </tr>
+      
+       <% }) %>
+
+
+
+
+    </table>
+
+    
+</body>
+</html>

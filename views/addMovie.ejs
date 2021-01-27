@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Movie</title>
+</head>
+<body>
+    <h1>🦞 🦞  </h1>
+    <h1>  Add Movie  </h1>
+    <%- include('partial/navbar') %>
+    <br>
+    <form action="/movies/add" method="POST">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name"  name ="name" placeholder="e.g 12 Angry Men" required>
+
+    </div>
+    <br>
+      <div class="form-group">
+        <label for="released_year">released_year</label>
+        <input type="number" class="form-control" id="released_year" name="released_year" placeholder="e.g 1975" required>
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="genre">Genre</label>
+        <select class="custom-select" id="genre" name="genre" required>
+            <option selected disabled>Please Select Genre</option>
+            <option value="Animation">Animasi</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Drama">Drama</option>
+            <option value="Horor">Horor</option>
+            <option value="Religius">Religi</option>
+            <option value="Thriller">Thriller</option>
+        </select>
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="Rating">Rating</label>
+      <input type="number" class="form-control" id="Rating" name="Rating" placeholder="e.g 1-5" required>
+    </div>
+    <br>
+      <button type="submit" class="btn btn-primary">Save</button>
+      <button type="button" class="btn btn-danger" onclick="history.back()">Cancel</button>
+    </form>
+    
+    
+    
+    
+    
+    
+    </form>
+</body>
+</html>

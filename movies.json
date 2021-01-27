@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "name": "Cinta ku kepentok Sudoku ",
+      "released_year": 2016,
+      "genre":"comedy"
+    },
+    {
+      "id": 2,
+      "name": "Ratapan di Depan Mac Mini",
+      "released_year": 2014,
+      "genre":"drama"
+    },
+    {
+      "id": 3,
+      "name": "Boogle 2, The Haunting Anchor",
+      "released_year": 2011,
+      "genre":"horror"
+    },
+    {
+      "id": 4,
+      "name": "Heroku wa Heromu da",
+      "released_year": 2008,
+      "genre":"animasi"
+    },
+    {
+      "id": 5,
+      "name": "Taubat Instruktur Karena Tugas Tak Dibuat",
+      "released_year": 2000,
+      "genre":"religi"
+    }
+  ]

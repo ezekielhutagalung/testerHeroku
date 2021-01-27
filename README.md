@@ -1,1 +1,1 @@
-# testerHeroku
+# Movie App Sequelize

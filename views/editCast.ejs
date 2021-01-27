@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Cast</title>
+</head>
+<body> 
+    <h1>🦞🦞 </h1>
+    <h1>Edit Cast</h1>
+    <%- include('partial/navbar') %>
+
+    <br>
+        <form action="/casts/<%= data.id %>/edit" method="POST">
+            <div class="form-group">
+                <label for="first_name">First Name</label>
+                <input type="text" class="form-group" id="first_name" name="first_name" value="<%= data.first_name%>">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="last_name">Last Name</label>
+                <input type="text" class="form-group" id="last_name" name="last_name" value="<%= data.last_name%>">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="birth_year">Birth Year</label>
+                <input type="number" class="form-group" id="birth_year" name="birth_year" value="<%= data.birth_year%>">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="phone_number">Phone Number</label>
+                <input type="text" class="form-group" id="phone_number" name="phone_number" value="<%= data.phone_number%>">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <br>
+                <input type="radio" id="male" name="gender" value="male" <%= data.gender === 'male' ? 'checked':'' %>>
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female"<%= data.gender === 'female' ? 'checked':'' %>>
+                <label for="female">Female</label><br>
+                <input type="radio" id="other" name="gender" value="other"<%= data.gender === 'other' ? 'checked':'' %>>
+                <label for="other">Other</label>
+            </div>
+            <br>
+              <button type="submit" class="btn btn-primary">Save</button>
+              <button type="button" class="btn btn-danger" onclick="history.back()">Cancel</button>
+        </form>
+    
+</body>
+</html>

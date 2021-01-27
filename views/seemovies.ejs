@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>See Movies</title>
+</head>
+<body>
+    <h1>🦞 🦞  </h1>
+    <h1>See Movies</h1>
+    <h2><%= data.getFullName() %></h2>
+    <%- include('partial/navbar') %>
+  <br>
+
+  <table border="3">
+        <tr>
+              <th>Movie</th>
+              <th>Released year</th>
+              <th>Age when Released</th>
+              <th>Role</th>
+
+
+        </tr>
+       <%data.Movies.forEach(el=>{ %>        
+            <tr>
+                <td><%=el.name %></td>
+                <td><%=el.released_year %></td>
+                <td><%=getYears(el.released_year, data.birth_year )%></td>
+                <td><%= el.MovieCast.role %></td>
+
+            </tr>
+        <%})%> 
+
+  </table>
+</body>
+</html>

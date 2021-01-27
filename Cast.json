@@ -1,0 +1,27 @@
+[
+    {
+      
+      "first_name": "Mali ",
+      "last_name": "Tong tong",
+      "phone_number":5556221,
+      "birth_year": 1975,
+      "gender" : "Male"
+    },
+    {
+      
+      "first_name": "Ezekill ",
+      "last_name": "El",
+      "phone_number":5558221,
+      "birth_year": 2000,
+      "gender" : "Male"
+    },
+    {
+      
+      "first_name": "Chloe Grace ",
+      "last_name": "Moretz",
+      "phone_number":55532121,
+      "birth_year": 2000,
+      "gender" : "Female"
+    }
+
+  ]

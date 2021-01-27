@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Movies</title>
+</head>
+<body>
+    <h1>🦞 🦞  </h1>
+    <h1> Edit Movie  </h1>
+    <%- include('partial/navbar') %>
+    <br>
+    <form action="/movies/<%= movies.id%>/edit" method="POST">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="name" id="name" name="name" value="<%= movies.name%>">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="released_year">Released Year</label>
+            <input type="number" class="released_year" id="released_year" name="released_year" value="<%= movies.released_year%>">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="genre">genre</label>
+            <select class="custom-select" id="genre" name="genre">
+                 <% let arr = ['Animation','Comedy','Drama','Horor','Religius','Thriller'] %>
+                 <% arr.forEach( el =>{ %> 
+                 <% if(movies.genre === el){%>     
+                <option value="<%= el %>" selected><%= el %></option>    
+                 <% }else{ %>
+                <option value="<%= el %>"><%= el %></option>     
+                <%}%>
+                <%})%>
+            </select>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="productionHouse">Production House</label>
+            <select class="custom-select"  id="ProductionHouseId" name="ProductionHouseId">
+                <% if(!movies.ProductionHouse) {%>   
+                <option selected disabled>Please select Production House</option>
+                <%}%>
+                <% prodHouse.forEach(el =>{%>     
+                <% if (movies.ProductionHouseId === el.id ){%>
+                <option value="<%= el.id%>" selected><%= el.name_prodHouse%></option>
+                <% } else { %>
+                <option value="<%= el.id%>" ><%= el.name_prodHouse%></option>   
+                <%}%>                            
+                <%})%>
+
+            </select>
+            <br>
+            <br>
+            <div class="form-group">
+                <label for="Rating">Rating</label>
+                <input type="number" class="Rating" id="Rating" name="Rating" value="<%= movies.Rating%>">
+            </div>
+            <br>
+        <button type="submit" class="btn btn-primary">Update</button>   
+        <button type="button" class="btn btn-danger" onclick="history.back()">Cancel</button>      
+
+
+        </div>
+
+
+    </form>
+
+    
+</body>
+</html>
